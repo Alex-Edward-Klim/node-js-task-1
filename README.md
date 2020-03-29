@@ -1,60 +1,25 @@
-# RS School REST service
+# !!!WARNING!!!
+Pay close attention to the point number **9** in the [crosscheck description](https://github.com/rolling-scopes-school/nodejs-course-template/blob/master/CROSSCHECK.md)!
+Please, NOTE (!) that if you are using **stdin** as an input source while the **output file** is provided, remember to REFRESH the **output file** ALWAYS after pressing "Enter" to see changes! E.g.: if you are using VSCode, then after pressing "Enter" switch away from the **output file** and then switch back to this **output file**, because VSCode does NOT always update file changes correctly!
 
-## Prerequisites
+## BEFORE (!) running npm install NAVIGATE to the caesar-cipher-cli-task-1 folder!
 
-- Git - [Download & Install Git](https://git-scm.com/downloads).
-- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
+## Only AFTER that RUN:
+**npm install**
+because package.json is located in the **caesar-cipher-cli-task-1** folder!
 
-## Downloading
+## Then RUN:
+**node index.js** with the following options:
 
-```
-git clone {repository URL}
-```
+CLI tool should accept 4 options (short alias and full name):
 
-## Installing NPM modules
+1.  **-s, --shift**: a shift
+2.  **-i, --input**: an input file
+3.  **-o, --output**: an output file
+4.  **-a, --action**: an action encode/decode
 
-```
-npm install
-```
+**input file** and **output file** are optional.
 
-## Running application
+If **input file** is not provided then **stdin** will be used as an input source*.
 
-```
-npm start
-```
-
-After starting the app on port (4000 as default) you can open
-in your browser OpenAPI documentation by typing http://localhost:4000/doc/.
-For more information about OpenAPI/Swagger please visit https://swagger.io/.
-
-## Testing
-
-After application running open new terminal and enter:
-
-To test without authorization
-
-```
-npm test
-```
-
-To test with authorization
-
-```
-npm run test:auth
-```
-
-## Development
-
-If you're using VSCode, you can get a better developer experience from integration with [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions.
-
-### Auto-fix and format
-
-```
-npm run lint
-```
-
-### Debugging in VSCode
-
-Press <kbd>F5</kbd> to debug.
-
-For more information, visit: https://code.visualstudio.com/docs/editor/debugging
+If **output file** is not provided then **stdout** will be used as an output source.
